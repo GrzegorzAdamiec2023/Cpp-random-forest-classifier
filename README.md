@@ -26,3 +26,6 @@ The program will also ask you how many example labels you wish to display on the
 # Output Data
 The main output is a TXT file with space-separated labels (in integer format). As mentioned earlier, you will also receive a snippet of several first labels of this data on the standard output in text form.
 You will also receive basic information about the training process (e.g. fitting time).
+
+# Train dataset requirements
+Becouse of that github doesn't allow send big files, before launching this project please attach to this repo features_train.csv and labels_train.csv file into root directiory. features_train.csv should be in the same shape like input CSV file. You can find Fashion MNIST dataset [here](https://www.kaggle.com/datasets/zalando-research/fashionmnist).
