@@ -37,7 +37,7 @@ int main(){
 	//load provided dataset
         mat dataset_to_predict;     
         if (!data::Load(path_to_predict, dataset_to_predict)) throw std::runtime_error("Could not read provided data!"); 
-	cout << "Loaded" << path_to_predict <<endl;
+	cout << "Loaded " << path_to_predict <<endl;
 	auto end = std::chrono::high_resolution_clock::now();
 	auto duration = std::chrono::duration_cast<std::chrono::seconds>(end - start);
 	cout << "Data has been loaded, loading time: " << duration.count() << " seconds" << endl;
