@@ -28,4 +28,4 @@ The main output is a TXT file with space-separated labels (in integer format). A
 You will also receive basic information about the training process (e.g. fitting time).
 
 # Train dataset requirements
-Because GitHub doesn't allow sending large files, please attach the `features_train.csv` and `labels_train.csv` files to the root directory of this repository before launching the project. The `features_train.csv` file should have the same format as the input CSV file. You can find the Fashion MNIST dataset [here](https://www.kaggle.com/datasets/zalando-research/fashionmnist).
+Because GitHub doesn't allow sending large files, please attach the `features_train.csv` and `labels_train_one.csv` files to the root directory of this repository before launching the project. The `features_train.csv` file should have the same format as the input CSV file. You can find the Fashion MNIST dataset [here](https://www.kaggle.com/datasets/zalando-research/fashionmnist).
