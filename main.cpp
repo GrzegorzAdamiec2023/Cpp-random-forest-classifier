@@ -82,38 +82,39 @@ int main(){
 	outputFile.close();
 
         // display example predictions
-        for (int i; i < number_to_print; i++){
+	cout << "Labels of first " << number_to_print << " features:" << endl;
+        for (int i = 0; i < number_to_print; i++){
         switch (testPredictions[i])
 	{
 		case 0:
-		  cout << i <<". T-shirt/top ";
+		  cout << i + 1 <<". T-shirt/top ";
 		  break;
 		case 1:
-		  cout << i <<". Trouser ";
+		  cout << i + 1 <<". Trouser ";
 		  break;
 		case 2:
-		  cout << i <<". Pullover ";
+		  cout << i + 1<<". Pullover ";
 		  break;
 		case 3:
-		  cout << i <<". Dress ";
+		  cout << i + 1<<". Dress ";
 		  break;
 		case 4:
-		  cout << i <<". Coat ";
+		  cout << i + 1<<". Coat ";
 		  break;
 		case 5:
-		  cout << i <<". Sandal ";
+		  cout << i + 1<<". Sandal ";
 		  break;
 		case 6:
-		  cout << i <<". Shirt ";
+		  cout << i + 1<<". Shirt ";
 		  break;
 		case 7:
-		  cout << i <<". Sneaker ";
+		  cout << i + 1<<". Sneaker ";
 		  break;
 		case 8:
-		  cout << i <<". Bag ";
+		  cout << i + 1<<". Bag ";
 		  break;
 		case 9:
-		  cout << i <<". Ankle boot ";
+		  cout << i + 1<<". Ankle boot ";
 		  break;
 	}
       cout << "\n";
