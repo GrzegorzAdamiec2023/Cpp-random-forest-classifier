@@ -31,8 +31,8 @@ int main(){
 	cout << "Loaded features_train.csv" << endl;
 
 	if (!data::Load("labels_train_one.csv", labels))
-		throw std::runtime_error("Could not read labels_train_one.csv!");
-	cout << "Loaded labels_train_one.csv" << endl;
+		throw std::runtime_error("Could not read labels_train.csv!");
+	cout << "Loaded labels_train.csv" << endl;
 
 	//load provided dataset
         mat dataset_to_predict;     
