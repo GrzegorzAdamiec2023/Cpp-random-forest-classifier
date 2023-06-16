@@ -24,16 +24,23 @@ int main(){
 	cin >> number_to_print;
 
   	//Load data
+	cout << "Begin of loading data" << endl;
+	auto start = std::chrono::high_resolution_clock::now();
 	if (!data::Load("features_train.csv", dataset))
 		throw std::runtime_error("Could not read features_train.csv!");
+	cout << "Loaded features_train.csv" << endl;
 
-
-	if (!data::Load("labels_train.csv", labels))
-		throw std::runtime_error("Could not read labels_train.csv!");
+	if (!data::Load("labels_train_one.csv", labels))
+		throw std::runtime_error("Could not read labels_train_one.csv!");
+	cout << "Loaded labels_train_one.csv" << endl;
 
 	//load provided dataset
         mat dataset_to_predict;     
         if (!data::Load(path_to_predict, dataset_to_predict)) throw std::runtime_error("Could not read provided data!"); 
+	cout << "Loaded" << path_to_predict <<endl;
+	auto end = std::chrono::high_resolution_clock::now();
+	auto duration = std::chrono::duration_cast<std::chrono::seconds>(end - start);
+	cout << "Data has been loaded, loading time: " << duration.count() << " seconds" << endl;
 
 
 	//split dataset
@@ -44,10 +51,10 @@ int main(){
 
 	//set model
 	cout << "Begin of fitting"<< endl;
-	auto start = std::chrono::high_resolution_clock::now();
+	start = std::chrono::high_resolution_clock::now();
   	RandomForest<> r(trainDataset, trainLabels, 10, 10, 3);
-	auto end = std::chrono::high_resolution_clock::now();
-	auto duration = std::chrono::duration_cast<std::chrono::seconds>(end - start);
+	end = std::chrono::high_resolution_clock::now();
+	duration = std::chrono::duration_cast<std::chrono::seconds>(end - start);
 	cout << "End of fitting, fitting time: " << duration.count() << " seconds" << endl;
 
 	//make predictions on training dataset
